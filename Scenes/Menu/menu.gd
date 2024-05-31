@@ -37,10 +37,9 @@ func _on_button_pressed():
 	ResourceLoader.load_threaded_request("res://Scenes/Levels/SeptemberCampaign/september_campaign_level.tscn", "", true)
 	#ResourceLoader.load_threaded_request("res://Scenes/Character/character_body_3d.tscn", "", true)
 	
+	#spawn_scene("res://Scenes/Levels/SeptemberCampaign/september_campaign_level.tscn", "september_campaign", "Root/Levels")
 	# spawn character only when main level has been loaded
-	if 
-	spawn_scene("res://Scenes/Levels/SeptemberCampaign/september_campaign_level.tscn", "september_campaign", "Root/Levels")
-	#spawn_scene("res://Scenes/Character/character_body_3d.tscn", "character", "Root/Levels")
+	spawn_scene("res://Scenes/Character/character_body_3d.tscn", "character", "Root/Levels")
 
 
 func spawn_scene(scene_path: String, scene_name: String, spawn_location: String = "Root"):
@@ -53,6 +52,8 @@ func spawn_scene(scene_path: String, scene_name: String, spawn_location: String 
 	#$".".add_child(level_instance)
 	get_tree().get_root().get_node(spawn_location).add_child(level_instance)  # add child under spawn location
 
+func threaded_load_with_progressbar():
+	pass
 
 func despawn_scene(scene_instance):
 	scene_instance.queue_free()
