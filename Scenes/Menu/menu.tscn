@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://gx5qed5slsxm"]
+
+[ext_resource type="Script" path="res://Scenes/Menu/menu.gd" id="1_b633d"]
+
+[node name="Menu" type="Node"]
+script = ExtResource("1_b633d")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 112.0
+offset_right = 736.0
+offset_bottom = 165.0
+text = "September Campaign"
+
+[node name="ProgressBar" type="ProgressBar" parent="Panel"]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 237.0
+offset_right = 885.0
+offset_bottom = 264.0
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
