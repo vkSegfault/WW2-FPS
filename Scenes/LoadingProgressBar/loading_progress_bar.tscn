@@ -6,5 +6,7 @@
 script = ExtResource("1_aceao")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-offset_right = 4.0
-offset_bottom = 27.0
+offset_left = 235.0
+offset_top = 232.0
+offset_right = 913.0
+offset_bottom = 259.0
